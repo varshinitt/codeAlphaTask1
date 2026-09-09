@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f3e8ff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quote-box {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(128, 0, 128, 0.15);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #7c3aed;
+        }
+
+        #quote {
+            font-size: 24px;
+            color: #4c1d95;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        #author {
+            font-size: 18px;
+            color: #ec4899;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #7c3aed;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4c1d95;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quote-box">
+        <h1>Random Quote</h1>
+
+        <p id="quote"></p>
+        <p id="author"></p>
+
+        <button onclick="newQuote()">New Quote</button>
+    </div>
+
+    <script>
+        const quotes = [
+            {
+                text: "The only way to do great work is to love what you do.",
+                author: "Steve Jobs"
+            },
+            {
+                text: "Believe you can and you're halfway there.",
+                author: "Theodore Roosevelt"
+            },
+            {
+                text: "It always seems impossible until it's done.",
+                author: "Nelson Mandela"
+            },
+            {
+                text: "Success is not final, failure is not fatal.",
+                author: "Winston Churchill"
+            },
+            {
+                text: "Dream big and dare to fail.",
+                author: "Norman Vincent Peale"
+            },
+            {
+                text: "The future depends on what you do today.",
+                author: "Mahatma Gandhi"
+            },
+            {
+                text: "Do what you can, with what you have, where you are.",
+                author: "Theodore Roosevelt"
+            },
+            {
+                text: "The secret of getting ahead is getting started.",
+                author: "Mark Twain"
+            },
+            {
+                text: "Believe you can and you're halfway there.",
+                author: "Theodore Roosevelt"
+            },
+            {
+                text: "It always seems impossible until it's done.",
+                author: "Nelson Mandela"
+            },
+            {
+                text: "The future depends on what you do today.",
+                author: "Mahatma Gandhi"
+            },
+            {
+                text: "Don't watch the clock; do what it does. Keep going.",
+                author: "Sam Levenson"
+            },
+            {
+                text: "Start where you are. Use what you have. Do what you can.",
+                author: "Arthur Ashe"
+            },
+            {
+                text: "Act as if what you do makes a difference. It does.",
+                author: "William James"
+            },
+            {
+                text: "Dream big and dare to fail.",
+                author: "Norman Vincent Peale"
+            },
+            {
+                text: "The only way to do great work is to love what you do.",
+                author: "Steve Jobs"
+            },
+            {
+                text: "Success is the sum of small efforts, repeated day in and day out.",
+                author: "Robert Collier"
+            },
+            {
+                text: "What we think, we become.",
+                author: "Buddha"
+            },
+            {
+                text: "Great things are done by a series of small things brought together.",
+                author: "Vincent van Gogh"
+            }
+        ];
+
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+
+            document.getElementById("quote").textContent =
+                '"' + quotes[randomIndex].text + '"';
+
+            document.getElementById("author").textContent =
+                "— " + quotes[randomIndex].author;
+        }
+
+
+        newQuote();
+    </script>
+
+</body>
+</html>
+
